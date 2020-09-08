@@ -12,7 +12,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
-import ArrowBack from "@material-ui/icons/ArrowBack";
+import MenuIcon from "@material-ui/icons/Menu";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#222",
     margin: 0,
   },
-  arrow: {
+  menu: {
     color: "tomato",
   },
   title: {
@@ -63,7 +63,7 @@ const Navbar = () => {
 
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
+      <Avatar className={classes.avatar} src={avatar} alt="Ricardo Medeiros" />
       <Divider />
       <List>
         {menuItems.map((item, i) => (
@@ -91,15 +91,15 @@ const Navbar = () => {
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
             <IconButton onClick={() => setOpen(true)}>
-              <ArrowBack className={classes.arrow} />
+              <MenuIcon className={classes.menu} />
             </IconButton>
             <Typography variant="h5" className={classes.title}>
-              Portfolio
+              Menu
             </Typography>
           </Toolbar>
         </AppBar>
       </Box>
-      <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
+      <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
         {sideList()}
         <Footer />
       </Drawer>
