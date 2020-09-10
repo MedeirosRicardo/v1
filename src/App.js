@@ -6,6 +6,7 @@ import Resume from "./components/Resume";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import resumeData from './resumeData';
 
 import "./App.css";
 
@@ -15,7 +16,7 @@ function App() {
       <CssBaseline />
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(props) => ( <Home {...props} resumeData={resumeData} /> )} />
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />

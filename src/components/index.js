@@ -3,10 +3,10 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 import Particles from "./Particles";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <BrowserRouter>
-      <Header />
+      <Header resumeData={props.resumeData} />
       <Particles />
     </BrowserRouter>
   );

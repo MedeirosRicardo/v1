@@ -31,25 +31,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header = (props) => {
   const classes = useStyles();
-
+  const resumeData = props.resumeData;
+  
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Ricardo Medeiros" />
+        <Avatar className={classes.avatar} src={avatar} alt={resumeData.name} />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Ricardo Medeiros"]} typeSpeed={40} />
+        <Typed strings={[resumeData.name]} typeSpeed={40} />
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
         <Typed
-          strings={[
-            "Frontend Developer",
-            "Backend Developer",
-            "Native App Developer",
-          ]}
+          strings={resumeData.homeSkills.map((item) => item.skillname)}
           typeSpeed={40}
           backSpeed={50}
           loop
