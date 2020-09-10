@@ -53,10 +53,13 @@ let resumeData = {
     "skillsDescription":"Your skills here",
     "homeSkills":[
       {
-        "skillname":"Frontend Developer"
+        "skillname":"JavaScript Lover"
       },
       {
         "skillname":"Backend Developer"
+      },
+      {
+        "skillname":"Frontend Developer"
       },
       {
         "skillname":"Native App Developer"
