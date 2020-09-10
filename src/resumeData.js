@@ -1,4 +1,4 @@
-let resumeData = {
+const resumeData = {
     "imagebaseurl":"https://www.ricardo.to/",
     "name": "Ricardo Medeiros",
     "role": "Full Stack Developer and JavaScript Lover",
@@ -20,34 +20,45 @@ let resumeData = {
     "website":"https://www.ricardo.to",
     "education":[
       {
-        "UniversityName":"Seneca College",
+        "universityName":"Seneca College",
         "specialization":"Computer Programmer Diploma",
-        "MonthOfPassing":"Apr",
-        "YearOfPassing":"2020",
-        "Achievements":"Some Achievements"
+        "monthOfConclusion":"Apr",
+        "yearOfConclusion":"2020",
+        "achievements":"Some Achievements"
       },
       {
-        "UniversityName":"FGV Brazil",
+        "universityName":"FGV - Fundação Getulio Vargas",
         "specialization":"Master of Business Administration",
-        "MonthOfPassing":"Oct",
-        "YearOfPassing":"2017",
-        "Achievements":"Some Achievements"
+        "monthOfConclusion":"Oct",
+        "yearOfConclusion":"2017",
+        "achievements":"Some Achievements"
+      },
+      {
+        "universityName":"UNIMEP - Universidade Metodista de Piracicaba",
+        "specialization":"Bachelor of Business Administration",
+        "monthOfConclusion":"Dec",
+        "yearOfConclusion":"2007",
+        "achievements":"Some Achievements"
       }
     ],
     "work":[
       {
-        "CompanyName":"Rio 40 Degrees Restaurant",
+        "companyName":"Rio 40 Degrees Restaurant",
         "specialization":"Server",
-        "MonthOfLeaving":"",
-        "YearOfLeaving":"",
-        "Achievements":"Some Achievements"
+        "monthOfStarting":"",
+        "yearOfStarting":"",
+        "monthOfLeaving":"",
+        "yearOfLeaving":"",
+        "achievements":"Some Achievements"
       },
       {
-        "CompanyName":"Milk Brinquedos",
+        "companyName":"Milk Brinquedos",
         "specialization":"Some specialization",
-        "MonthOfLeaving":"Oct",
-        "YearOfLeaving":"2018",
-        "Achievements":"Some Achievements"
+        "monthOfStarting":"",
+        "yearOfStarting":"",
+        "monthOfLeaving":"Oct",
+        "yearOfLeaving":"2018",
+        "achievements":"Some Achievements"
       }
     ],
     "skillsDescription":"Your skills here",
@@ -86,22 +97,38 @@ let resumeData = {
       {
         "name":"project1",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/coffee.jpg"
+        "imgurl":"images/portfolio/coffee.jpg",
+        "technologies":[
+          "javascript",
+          "react"
+        ]
       },
       {
         "name":"project2",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/console.jpg"
+        "imgurl":"images/portfolio/console.jpg",
+        "technologies":[
+          "javascript",
+          "react"
+        ]
       },
       {
         "name":"project3",
         "description":"mobileapp",  
-        "imgurl":"images/portfolio/farmerboy.jpg"
+        "imgurl":"images/portfolio/farmerboy.jpg",
+        "technologies":[
+          "javascript",
+          "react"
+        ]
       },
       {
         "name":"project4",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/girl.jpg"
+        "imgurl":"images/portfolio/girl.jpg",
+        "technologies":[
+          "javascript",
+          "react"
+        ]
       }
     ],
     "testimonials":[

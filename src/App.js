@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" render={(props) => ( <Home {...props} resumeData={resumeData} /> )} />
-        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/resume" render={(props) => ( <Resume {...props} resumeData={resumeData} /> )} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
