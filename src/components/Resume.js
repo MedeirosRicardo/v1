@@ -5,7 +5,8 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "rgba(34,34,51,0.5)",
+    minHeight: "calc(100vh - 64px)",
   },
   timeLine: {
     position: "relative",
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLineYear: {
     textAlign: "center",
-    maxWidth: "9.6rem",
+    maxWidth: "9.8rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.8rem",
     color: "#fff",
@@ -125,7 +126,7 @@ const Resume = (props) => {
               variant="h2"
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              {`${item.monthOfConclusion} ${item.yearOfConclusion}`}
+              {item.yearOfConclusion}
             </Typography>
             <Box component="div" className={classes.timeLineItem}>
               <Typography
