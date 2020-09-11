@@ -118,35 +118,37 @@ const Resume = (props) => {
       <Typography variant="h4" align="center" className={classes.heading}>
         Education
       </Typography>
-      {resumeData.education.map((item, index) => (
-        <Box component="div" className={classes.timeLine} key={index}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            {`${item.monthOfConclusion} ${item.yearOfConclusion}`}
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+      <Box component="div" className={classes.timeLine} >
+        {resumeData.education.map((item, index) => (
+          <React.Fragment key={index}>
             <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              {item.universityName}
+              {`${item.monthOfConclusion} ${item.yearOfConclusion}`}
             </Typography>
-            <Typography variant="body1" align="center" className={classes.body1}>
-              {item.specialization}
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              className={classes.subtitle1}
-            >
-              {item.achievements}
-            </Typography>
-          </Box>
-        </Box>
-      ))}
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                {item.universityName}
+              </Typography>
+              <Typography variant="body1" align="center" className={classes.body1}>
+                {item.specialization}
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                align="center"
+                className={classes.subtitle1}
+              >
+                {item.achievements}
+              </Typography>
+            </Box>
+          </React.Fragment>
+        ))}
+      </Box>
     </Box>
   );
 };
