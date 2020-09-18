@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import resumeData from './resumeData';
 
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
+      <Footer />
     </React.Fragment>
   );
 }

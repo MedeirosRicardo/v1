@@ -5,8 +5,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "rgba(34,34,51,0.5)",
-    minHeight: "calc(100vh - 64px)",
+    
   },
   timeLine: {
     position: "relative",
@@ -115,42 +114,42 @@ const Resume = (props) => {
   const resumeData = props.resumeData;
 
   return (
-    <Box component="header" className={classes.mainContainer}>
-      <Typography variant="h4" align="center" className={classes.heading}>
-        Education
+      <Box component="header" className={classes.mainContainer}>
+        <Typography variant="h4" align="center" className={classes.heading}>
+          Education
       </Typography>
-      <Box component="div" className={classes.timeLine} >
-        {resumeData.education.map((item, index) => (
-          <React.Fragment key={index}>
-            <Typography
-              variant="h2"
-              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-            >
-              {item.yearOfConclusion}
-            </Typography>
-            <Box component="div" className={classes.timeLineItem}>
+        <Box component="div" className={classes.timeLine} >
+          {resumeData.education.map((item, index) => (
+            <React.Fragment key={index}>
               <Typography
-                variant="h5"
-                align="center"
-                className={classes.subHeading}
+                variant="h2"
+                className={`${classes.timeLineYear} ${classes.timeLineItem}`}
               >
-                {item.universityName}
+                {item.yearOfConclusion}
               </Typography>
-              <Typography variant="body1" align="center" className={classes.body1}>
-                {item.specialization}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                align="center"
-                className={classes.subtitle1}
-              >
-                {item.achievements}
-              </Typography>
-            </Box>
-          </React.Fragment>
-        ))}
+              <Box component="div" className={classes.timeLineItem}>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  className={classes.subHeading}
+                >
+                  {item.universityName}
+                </Typography>
+                <Typography variant="body1" align="center" className={classes.body1}>
+                  {item.specialization}
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  align="center"
+                  className={classes.subtitle1}
+                >
+                  {item.achievements}
+                </Typography>
+              </Box>
+            </React.Fragment>
+          ))}
+        </Box>
       </Box>
-    </Box>
   );
 };
 
