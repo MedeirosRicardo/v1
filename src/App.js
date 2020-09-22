@@ -19,7 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => ( <Home {...props} resumeData={resumeData} /> )} />
         <Route exact path="/resume" render={(props) => ( <Resume {...props} resumeData={resumeData} /> )} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path="/portfolio" render={(props) => ( <Portfolio {...props} resumeData={resumeData} /> )} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
       <Footer />
