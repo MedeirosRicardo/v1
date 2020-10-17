@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "3rem auto",
   },
   technologies: {
-    margin: "8px 16px 0px 0",
+    margin: "8px 16px 0 0",
     display: "inline-block"
   },
 }));
@@ -66,10 +66,24 @@ const Portfolio = (props) => {
               </CardContent>
               <ThemeProvider theme={theme}>
                 <CardActions>
-                  <Button size="small" variant="contained" color="primary" startIcon={<GitHubIcon />}>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    color="primary"
+                    startIcon={<GitHubIcon />}
+                    href={`${item.codeurl}`}
+                    target="_blank"
+                  >
                     Code
                   </Button>
-                  <Button size="small" variant="contained" color="primary" endIcon={<ExitToAppIcon />}>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    color="primary"
+                    endIcon={<ExitToAppIcon />}
+                    href={`${item.liveurl}`}
+                    target="_blank"
+                  >
                     Live Demo
                   </Button>
                 </CardActions>
