@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     margin: "3rem auto",
   },
+  technologies: {
+    margin: "8px 16px 0px 0",
+    display: "inline-block"
+  },
 }));
 
 const theme = createMuiTheme({
@@ -54,6 +58,11 @@ const Portfolio = (props) => {
                 <Typography variant="body2" color="textSecondary">
                   {item.description}
                 </Typography>
+                {item.technologies.map((tech, i) => (
+                  <Typography key={i} className={classes.technologies} variant="body1" color="textPrimary">
+                    {tech}
+                  </Typography>
+                ))}
               </CardContent>
               <ThemeProvider theme={theme}>
                 <CardActions>

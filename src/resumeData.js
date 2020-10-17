@@ -100,7 +100,8 @@ const resumeData = {
       "imgurl": "images/react.png",
       "technologies": [
         "javascript",
-        "react"
+        "react",
+        "Next.js"
       ]
     },
     {
@@ -112,7 +113,8 @@ const resumeData = {
       "imgurl": "images/mern-stack.jpg",
       "technologies": [
         "javascript",
-        "react"
+        "react",
+        "Wordpress"
       ]
     },
     {
