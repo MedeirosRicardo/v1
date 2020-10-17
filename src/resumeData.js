@@ -98,6 +98,8 @@ const resumeData = {
       "name": "project1",
       "description": "mobileapp",
       "imgurl": "images/react.png",
+      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
+      "liveurl": "https://arnin-web322.herokuapp.com/",
       "technologies": [
         "javascript",
         "react",
@@ -111,6 +113,8 @@ const resumeData = {
         eligendi, magnam est aliquam recusandae? Magnam soluta minus\
         iste alias sunt veritatis nisi dolores!`,
       "imgurl": "images/mern-stack.jpg",
+      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
+      "liveurl": "https://arnin-web322.herokuapp.com/",
       "technologies": [
         "javascript",
         "react",
@@ -121,6 +125,8 @@ const resumeData = {
       "name": "project3",
       "description": "mobileapp",
       "imgurl": "images/javascript-fullstack.jpg",
+      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
+      "liveurl": "https://arnin-web322.herokuapp.com/",
       "technologies": [
         "javascript",
         "react"
@@ -130,6 +136,8 @@ const resumeData = {
       "name": "project4",
       "description": "mobileapp",
       "imgurl": "images/html-css-javascript-lg.jpg",
+      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
+      "liveurl": "https://arnin-web322.herokuapp.com/",
       "technologies": [
         "javascript",
         "react"
@@ -148,4 +156,4 @@ const resumeData = {
   ]
 }
 
-export default resumeData
+export default resumeData;
