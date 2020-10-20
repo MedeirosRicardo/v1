@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
@@ -6,8 +6,11 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-
+import { Alert, AlertTitle } from '@material-ui/lab';
 import Send from "@material-ui/icons/Send";
+import emailjs from "emailjs-com";
+
+import config from "../config/config";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -62,11 +65,33 @@ const InputField = withStyles({
   },
 })(TextField);
 
+const defaultValues = {
+  name: "",
+  email: "",
+  message: ""
+};
+
 const Contact = () => {
   const classes = useStyles();
 
-  const { control, handleSubmit, errors } = useForm();
-  const onSubmit = values => console.log(values);
+  const [ isSuccessfullySubmitted, setIsSuccessfullySubmitted ] = useState(false);
+
+  const { control, handleSubmit, errors, reset } = useForm({defaultValues});
+  
+  const onSubmit = async values => {
+    const serviceID = config.emailjs.serviceID;
+    const templateID = config.emailjs.templateID;
+    const userID = config.emailjs.userID;
+
+    emailjs.send(serviceID, templateID, values, userID)
+      .then(() => {
+        reset(defaultValues);
+        setIsSuccessfullySubmitted(true);
+      })
+      .catch(() => {
+        setIsSuccessfullySubmitted("error");
+      });
+    };
 
   return (
     <Box component="div" className={classes.contactContainer}>
@@ -76,6 +101,18 @@ const Contact = () => {
             <Typography variant="h5" className={classes.heading}>
               Get In Touch
             </Typography>
+            {isSuccessfullySubmitted === true && (
+              <Alert severity="success" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
+                <AlertTitle>Success</AlertTitle>
+              Your message was successfully sent!
+              </Alert>
+            )}
+            {isSuccessfullySubmitted === "error" && (
+              <Alert severity="error" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
+                <AlertTitle>Something went wrong</AlertTitle>
+              Your message was not sent. Please try again!
+              </Alert>
+            )}
             <Controller
               name="name"
               as={
