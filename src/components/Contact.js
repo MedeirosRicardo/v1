@@ -1,4 +1,5 @@
 import React from "react";
+import { Controller, useForm } from "react-hook-form";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -63,43 +64,86 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
+
+  const { control, handleSubmit, errors } = useForm();
+  const onSubmit = values => console.log(values);
+
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
-          <Typography variant="h5" className={classes.heading}>
-            Hire or Contact me...
-          </Typography>
-          <InputField
-            fullWidth={true}
-            label="Name"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-          />
-          <InputField
-            fullWidth={true}
-            label="Email"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-            className={classes.field}
-          />
-          <InputField
-            fullWidth={true}
-            label="Message"
-            variant="outlined"
-            multiline
-            rows={4}
-            inputProps={{ className: classes.input }}
-          />
-          <Button
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<Send />}
-            className={classes.button}
-          >
-            Contact Me
-          </Button>
-        </Box>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Box className={classes.form}>
+            <Typography variant="h5" className={classes.heading}>
+              Get In Touch
+            </Typography>
+            <Controller
+              name="name"
+              as={
+                <InputField
+                  fullWidth={true}
+                  label="Name"
+                  variant="outlined"
+                  inputProps={{ className: classes.input }}
+                  required={true}
+                />
+              }
+              control={control}
+              defaultValue=""
+              rules={{
+                required: "Required"
+              }}
+            />
+            <Controller
+              name="email"
+              as={
+                <InputField
+                  id="email"
+                  fullWidth={true}
+                  label="Email"
+                  variant="outlined"
+                  inputProps={{ className: classes.input }}
+                  className={classes.field}
+                  required={true}
+                  helperText={errors.email ? errors.email.message : null}
+                  error={errors.email ? true : false}
+                />
+              }
+              control={control}
+              defaultValue=""
+              rules={{
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: 'Invalid email address'
+                }
+              }}
+            />
+            <Controller
+              name="message"
+              as={
+                <InputField
+                  fullWidth={true}
+                  label="Message"
+                  variant="outlined"
+                  multiline
+                  rows={4}
+                  inputProps={{ className: classes.input }}
+                  required={true}
+                />
+              }
+              control={control}
+              defaultValue=""
+            />
+            <Button
+              variant="outlined"
+              fullWidth={true}
+              endIcon={<Send />}
+              className={classes.button}
+              type="submit"
+            >
+              Contact Me
+            </Button>
+          </Box>
+        </form>
       </Grid>
     </Box>
   );

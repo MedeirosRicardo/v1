@@ -6,10 +6,10 @@ import Resume from "./components/Resume";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import resumeData from './resumeData';
 
 import "./App.css";
-import Footer from "./components/Footer";
 
 function App() {
   return (
