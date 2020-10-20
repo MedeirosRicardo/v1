@@ -89,9 +89,6 @@ const Contact = () => {
               }
               control={control}
               defaultValue=""
-              rules={{
-                required: "Required"
-              }}
             />
             <Controller
               name="email"
