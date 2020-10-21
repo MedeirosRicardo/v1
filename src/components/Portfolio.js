@@ -13,11 +13,15 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-
+    
   },
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
+    backgroundColor: "transparent"
+  },
+  cardContent: {
+    backgroundColor: "#fff"
   },
   technologies: {
     margin: "8px 16px 0 0",
@@ -41,17 +45,16 @@ const Portfolio = (props) => {
   return (
     <Box component="div" className={classes.mainContainer}>
       <Grid container justify="center">
-        {/* Projects */}
         {resumeData.portfolio.map((item, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
-            <Card className={classes.cardContainer}>
+            <Card className={classes.cardContainer} elevation={3}>
               <CardMedia
                 component="img"
                 alt={item.name}
                 height="140"
                 image={`${item.imgurl}`}
               />
-              <CardContent>
+              <CardContent className={classes.cardContent}>
                 <Typography variant="h5" gutterBottom>
                   {item.name}
                 </Typography>
@@ -65,7 +68,7 @@ const Portfolio = (props) => {
                 ))}
               </CardContent>
               <ThemeProvider theme={theme}>
-                <CardActions>
+                <CardActions className={classes.cardContent}>
                   <Button
                     size="small"
                     variant="contained"
