@@ -21,11 +21,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent"
   },
   cardContent: {
+    backgroundColor: "#fff",
+    minHeight: "200px"
+  },
+  cardBottom: {
     backgroundColor: "#fff"
   },
   technologies: {
     margin: "8px 16px 0 0",
-    display: "inline-block"
+    display: "inline-block",
+    fontSize: "0.875rem",
+    lineHeight: 1
   },
 }));
 
@@ -68,7 +74,7 @@ const Portfolio = (props) => {
                 ))}
               </CardContent>
               <ThemeProvider theme={theme}>
-                <CardActions className={classes.cardContent}>
+                <CardActions className={classes.cardBottom}>
                   <Button
                     size="small"
                     variant="contained"
