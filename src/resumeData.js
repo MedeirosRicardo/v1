@@ -133,14 +133,15 @@ const resumeData = {
       ]
     },
     {
-      "name": "project4",
-      "description": "mobileapp",
-      "imgurl": "images/html-css-javascript-lg.jpg",
-      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
-      "liveurl": "https://arnin-web322.herokuapp.com/",
+      "name": "Math Game",
+      "description": "A Math Game that encourages kids to perform basic addition, subtraction and division of numbers.",
+      "imgurl": "images/portfolio-04.jpg",
+      "codeurl": "https://github.com/MedeirosRicardo/math-game",
+      "liveurl": "https://arnin-math-game.herokuapp.com/",
       "technologies": [
-        "javascript",
-        "react"
+        "JavaScript",
+        "HTML",
+        "CSS",
       ]
     },
     {
