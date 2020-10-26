@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import About from "./components/About";
 import resumeData from './resumeData';
 
 import "./App.css";
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/" render={(props) => ( <Home {...props} resumeData={resumeData} /> )} />
         <Route exact path="/resume" render={(props) => ( <Resume {...props} resumeData={resumeData} /> )} />
         <Route exact path="/portfolio" render={(props) => ( <Portfolio {...props} resumeData={resumeData} /> )} />
+        <Route exact path="/about" render={(props) => ( <About {...props} resumeData={resumeData} /> )} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
       <Footer />

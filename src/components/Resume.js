@@ -117,7 +117,7 @@ const Resume = (props) => {
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           Education
-      </Typography>
+        </Typography>
         <Box component="div" className={classes.timeLine} >
           {resumeData.education.map((item, index) => (
             <React.Fragment key={index}>
