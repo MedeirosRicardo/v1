@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 32,
     background: "rgba(0,0,0,0.3)"
   },
+  innerContainer: {
+    maxWidth: "900px"
+  },
   heading: {
     color: "tomato",
     padding: "2rem 0",
@@ -30,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: "tan",
-    maxWidth: "510px",
+    maxWidth: "500px",
     paddingBottom: "12px",
     marginRight: "12px",
     fontSize: "1.1rem",
@@ -54,7 +57,7 @@ const About = (props) => {
 
   return (
     <Grid container className={classes.aboutContainer}>
-      <Box>
+      <Box className={classes.innerContainer}>
         <Typography variant="h4" align="left" className={classes.heading}>
           About Me
         </Typography>
@@ -90,7 +93,7 @@ const About = (props) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item justify="center">
+          <Grid>
             <Avatar className={classes.image}>
               <img className={classes.img} alt="complex" src="images/me.jpg" />
             </Avatar>
