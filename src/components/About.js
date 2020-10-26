@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexGrow: 1,
+    flexShrink: 0,
     padding: 32,
     background: "rgba(0,0,0,0.3)"
   },
@@ -62,7 +63,7 @@ const About = (props) => {
           About Me
         </Typography>
         <Grid container>
-          <Grid item xs={12} sm container>
+          <Grid sm>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs className={classes.skillsContainer}>
                 <Typography variant="body1" className={classes.text}>

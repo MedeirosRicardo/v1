@@ -13,6 +13,8 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
+    flexGrow: 1,
+    flexShrink: 0,
     background: "rgba(0,0,0,0.3)"
   },
   cardContainer: {
