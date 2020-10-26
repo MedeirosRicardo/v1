@@ -81,16 +81,19 @@ const resumeData = {
       "skillname": "JavaScript"
     },
     {
-      "skillname": "HTML5"
-    },
-    {
-      "skillname": "CSS"
-    },
-    {
       "skillname": "React"
     },
     {
-      "skillname": "Angular"
+      "skillname": "ReactNative"
+    },
+    {
+      "skillname": "Node.js"
+    },
+    {
+      "skillname": "HTML & CSS"
+    },
+    {
+      "skillname": "WordPress"
     }
   ],
   "portfolio": [

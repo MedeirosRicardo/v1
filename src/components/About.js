@@ -1,15 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import { Avatar, Box, Paper, Typography } from "@material-ui/core";
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { Avatar, Box, GridList, ListItem, ListItemIcon, ListItemText, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   aboutContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexGrow: 1,
-    background: "#233"
+    padding: 32,
+    background: "rgba(0,0,0,0.3)"
   },
   heading: {
     color: "tomato",
@@ -17,53 +18,82 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase"
   },
   image: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
     borderRadius: "8px",
-    marginRight: 32
   },
   img: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
+  text: {
+    color: "tan",
+    maxWidth: "510px",
+    paddingBottom: "12px",
+    marginRight: "12px",
+    fontSize: "1.1rem",
+
+    "& a": {
+      textDecoration: "none",
+      color: "tomato",
+    }
+  },
+  skillsContainer: {
+    marginBottom: 32
+  },
+  skillsText: {
+    color: "tan",
+  }
 }));
 
-const About = () => {
+const About = (props) => {
   const classes = useStyles();
+  const resumeData = props.resumeData;
 
   return (
     <Grid container className={classes.aboutContainer}>
       <Box>
         <Typography variant="h4" align="left" className={classes.heading}>
           About Me
-      </Typography>
-        <Grid container spacing={2}>
-          <Grid item>
+        </Typography>
+        <Grid container>
+          <Grid item xs={12} sm container>
+            <Grid item xs container direction="column" spacing={2}>
+              <Grid item xs className={classes.skillsContainer}>
+                <Typography variant="body1" className={classes.text}>
+                  Hello! I'm Ricardo, a software engineer based in Toronto, ON.
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  I enjoy creating things, wheter it is a website, an application, or anything in between. My goal is
+                  to always build products that provide performant experiences.
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  I'm a fresh graduate from{' '}
+                  <a href="https://www.senecacollege.ca/">Seneca College</a>
+                  {' '}in Computer Programmer.
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  Here are a few technologies I've been working with recently:
+                </Typography>
+                <GridList cols={2} cellHeight="auto">
+                  {resumeData.skills.map((skill, i) => (
+                    <ListItem key={i}>
+                      <ListItemIcon className={classes.skillsText}>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={skill.skillname} className={classes.skillsText} />
+                    </ListItem>
+                  ))}
+                </GridList>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item justify="center">
             <Avatar className={classes.image}>
               <img className={classes.img} alt="complex" src="images/me.jpg" />
             </Avatar>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="h4">
-                  About Me
-              </Typography>
-                <Typography variant="body2" gutterBottom>
-                  Full resolution 1920x1080 • JPEG
-              </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  ID: 1030114
-              </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                  Remove
-              </Typography>
-              </Grid>
-            </Grid>
           </Grid>
         </Grid>
       </Box>

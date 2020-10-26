@@ -14,20 +14,17 @@ import config from "../config/config";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexGrow: 1,
+    padding: 32,
     background: "#233",
-    height: "100vh",
   },
   heading: {
     color: "tomato",
     textAlign: "center",
     textTransform: "uppercase",
     marginBottom: "1rem",
-  },
-  form: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    position: "absolute",
   },
   input: {
     color: "#fff",
@@ -94,10 +91,10 @@ const Contact = () => {
     };
 
   return (
-    <Box component="div" className={classes.contactContainer}>
+    <Grid container className={classes.contactContainer}>
       <Grid container justify="center">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Box className={classes.form}>
+          <Box>
             <Typography variant="h5" className={classes.heading}>
               Get In Touch
             </Typography>
@@ -179,7 +176,7 @@ const Contact = () => {
           </Box>
         </form>
       </Grid>
-    </Box>
+    </Grid>
   );
 };
 

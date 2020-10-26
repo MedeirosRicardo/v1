@@ -13,7 +13,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    
+    background: "rgba(0,0,0,0.3)"
   },
   cardContainer: {
     maxWidth: 345,

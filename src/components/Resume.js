@@ -5,7 +5,10 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    
+    justifyContent: "center",
+    alignItems: "center",
+    flexGrow: 1,
+    background: "rgba(0,0,0,0.3)"
   },
   timeLine: {
     position: "relative",
