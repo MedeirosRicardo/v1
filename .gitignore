@@ -1,6 +1,7 @@
 package-lock.json
 config/
 build/
+.htaccess
 
 # Logs
 logs
