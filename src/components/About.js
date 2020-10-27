@@ -1,8 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Avatar from "@material-ui/core/Avatar";
+import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
+import GridList from "@material-ui/core/GridList";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Typography from "@material-ui/core/Typography";
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import { Avatar, Box, GridList, ListItem, ListItemIcon, ListItemText, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   aboutContainer: {

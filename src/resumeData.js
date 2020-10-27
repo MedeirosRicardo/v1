@@ -84,7 +84,7 @@ const resumeData = {
       "skillname": "React"
     },
     {
-      "skillname": "ReactNative"
+      "skillname": "React Native"
     },
     {
       "skillname": "Node.js"
@@ -98,41 +98,32 @@ const resumeData = {
   ],
   "portfolio": [
     {
-      "name": "project1",
-      "description": "mobileapp",
-      "imgurl": "images/react.png",
-      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
-      "liveurl": "https://arnin-web322.herokuapp.com/",
+      "name": "Ricardo.TO - v1",
+      "description": "The first version of my personal website built with React and Material-UI.",
+      "imgurl": "images/portfolio-01.jpg",
+      "codeurl": "#",
+      "liveurl": "https://www.ricardo.to/",
       "technologies": [
-        "javascript",
-        "react",
-        "Next.js"
+        "JavaScript",
+        "React",
+        "Material-UI",
+        "EmailJS"
       ]
     },
     {
-      "name": "project2",
-      "description": `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-        consequatur magni quod nesciunt necessitatibus molestiae non\
-        eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-        iste alias sunt veritatis nisi dolores!`,
-      "imgurl": "images/mern-stack.jpg",
-      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
-      "liveurl": "https://arnin-web322.herokuapp.com/",
+      "name": "Ecoleta",
+      "description": "Ecoleta is an application that aims to help people find places that collect specific types of waste, encouraging people to recycle more.",
+      "imgurl": "images/portfolio-02.jpg",
+      "codeurl": "https://github.com/MedeirosRicardo/ecoleta",
+      "liveurl": "",
       "technologies": [
-        "javascript",
-        "react",
-        "Wordpress"
-      ]
-    },
-    {
-      "name": "project3",
-      "description": "mobileapp",
-      "imgurl": "images/javascript-fullstack.jpg",
-      "codeurl": "https://github.com/MedeirosRicardo/airbnb",
-      "liveurl": "https://arnin-web322.herokuapp.com/",
-      "technologies": [
-        "javascript",
-        "react"
+        "JavaScript",
+        "React",
+        "React Native",
+        "Node.js",
+        "Expo",
+        "Axios",
+        "Leaflet"
       ]
     },
     {
@@ -155,7 +146,7 @@ const resumeData = {
       "liveurl": "https://arnin-web322.herokuapp.com/",
       "technologies": [
         "JavaScript",
-        "Node.JS",
+        "Node.js",
         "Express",
         "Handlebars",
         "MongoDB"

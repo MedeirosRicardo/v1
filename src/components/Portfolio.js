@@ -87,7 +87,8 @@ const Portfolio = (props) => {
                   >
                     Code
                   </Button>
-                  <Button
+                  {item.liveurl === "" ? "" : 
+                    <Button
                     size="small"
                     variant="contained"
                     color="primary"
@@ -97,6 +98,7 @@ const Portfolio = (props) => {
                   >
                     Live Demo
                   </Button>
+                  }
                 </CardActions>
               </ThemeProvider>
             </Card>
