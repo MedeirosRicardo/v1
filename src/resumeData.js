@@ -101,7 +101,7 @@ const resumeData = {
       "name": "Ricardo.TO - v1",
       "description": "The first version of my personal website built with React and Material-UI.",
       "imgurl": "images/portfolio-01.jpg",
-      "codeurl": "#",
+      "codeurl": "https://github.com/MedeirosRicardo/v1",
       "liveurl": "https://www.ricardo.to/",
       "technologies": [
         "JavaScript",

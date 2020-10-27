@@ -10,8 +10,6 @@ import { Alert, AlertTitle } from '@material-ui/lab';
 import Send from "@material-ui/icons/Send";
 import emailjs from "emailjs-com";
 
-import config from "../config/config";
-
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     justifyContent: "center",
@@ -77,9 +75,9 @@ const Contact = () => {
   const { control, handleSubmit, errors, reset } = useForm({defaultValues});
   
   const onSubmit = async values => {
-    const serviceID = config.emailjs.serviceID;
-    const templateID = config.emailjs.templateID;
-    const userID = config.emailjs.userID;
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const userID = process.env.REACT_APP_USER_ID;
 
     emailjs.send(serviceID, templateID, values, userID)
       .then(() => {
