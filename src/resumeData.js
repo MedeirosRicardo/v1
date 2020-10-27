@@ -140,7 +140,7 @@ const resumeData = {
     },
     {
       "name": "Airbnb Website Clone",
-      "description": "The objective to this project was to create from scratch a server-side web application using Node.js, Express, Handlebars, and MongoDB.",
+      "description": "The objective of this project was to create from scratch a server-side web application using Node.js, Express, Handlebars, and MongoDB.",
       "imgurl": "images/portfolio-05.jpg",
       "codeurl": "https://github.com/MedeirosRicardo/airbnb",
       "liveurl": "https://arnin-web322.herokuapp.com/",
