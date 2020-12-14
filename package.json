@@ -1,1 +1,30 @@
-{"name":"ricardo-to-gatsby","version":"1.0.0","private":true,"description":"My Gatsby site","author":"Ricardo Medeiros","keywords":["gatsby"],"scripts":{"develop":"gatsby develop","start":"gatsby develop","build":"gatsby build","serve":"gatsby serve","clean":"gatsby clean"},"license":"0BSD","dependencies":{"gatsby":"^2.26.1","gatsby-plugin-image":"^0.3.1","gatsby-plugin-react-helmet":"^3.6.0","gatsby-plugin-sharp":"^2.10.1","gatsby-source-filesystem":"^2.7.0","gatsby-transformer-sharp":"^2.8.0","react":"^16.13.1","react-dom":"^16.13.1","react-helmet":"^6.1.0"}}
+{
+  "name": "ricardo-to",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Ricardo Medeiros personal website portfolio",
+  "author": "Ricardo Medeiros",
+  "keywords": [
+    "gatsby",
+    "portfolio"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-image": "^0.3.1",
+    "gatsby-plugin-react-helmet": "^3.6.0",
+    "gatsby-plugin-sharp": "^2.10.1",
+    "gatsby-source-filesystem": "^2.7.0",
+    "gatsby-transformer-sharp": "^2.8.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
+  }
+}

@@ -1,48 +1,60 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
+<div align="center">
+  <img alt="Logo" src="https://www.ricardo.to/static/media/avatar.52849e21.png" width="100" />
+</div>
 <h1 align="center">
-  Gatsby minimal starter
+  ricardo.TO - v1.1
 </h1>
+<p align="center">
+  The first version of <a href="https://ricardo.to" target="_blank">ricardo.to</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and <a href="https://material-ui.com/" target="_blank">Material - UI</a>
+</p>
 
-## 🚀 Quick start
+![demo](https://www.ricardo.to/images/page.jpg)
 
-1.  **Create a Gatsby site.**
+## 📑 Version 1.1
+Changed from Creat-React-App to Gatsby
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## 🚨 Forking this repo
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Yes, you can fork this repo. Please give me proper credit by linking back to [ricardo.TO](https://www.ricardo.to). Thanks!
 
-2.  **Start developing.**
+## 🛠 Installation & Set Up
 
-    Navigate into your new site’s directory and start it up.
+1. Install dependencies
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+   ```sh
+   npm install
+   ```
 
-3.  **Open the code and start customizing!**
+2. Start the development server
 
-    Your site is now running at http://localhost:8000!
+   ```sh
+   npm start
+   ```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## 🚀 Building and Running for Production
 
-4.  **Learn more**
+1. Generate a full static production build
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+   ```sh
+   npm run build
+   ```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## :memo: License
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+This project is under the MIT license. See the [LICENSE](https://github.com/MedeirosRicardo/v1/blob/master/LICENSE) for more information
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## :mailbox_with_mail: Get in touch!
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<a href="https://ricardo.to" target="_blank" >
+  <img alt="Website - Ricardo Medeiros" src="https://img.shields.io/badge/Website--%23F8952D?style=social">
+</a>&nbsp;&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/ricmedeiros/" target="_blank" >
+  <img alt="Linkedin - Ricardo Medeiros" src="https://img.shields.io/badge/Linkedin--%23F8952D?style=social&logo=linkedin">
+</a>&nbsp;&nbsp;&nbsp;
+<a href="mailto:medeiros.ricardo@outlook.com" target="_blank" >
+  <img alt="Email - Ricardo Medeiros" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
+</a> 
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+---
+
+Made with ❤️ by Ricardo Medeiros.
