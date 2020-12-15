@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `Ricardo.TO`,
+    siteUrl: 'https://www.ricardo.to',
+    description: 'Ricardo Medeiros personal website portfolio.',
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -8,10 +13,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/assets/images/",
+        name: "src",
+        path: `${__dirname}/src/`,
       },
-      __key: "images",
+      __key: "src",
     },
   ],
 };
