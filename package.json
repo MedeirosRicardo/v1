@@ -19,6 +19,7 @@
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-plugin-image": "^0.3.1",
+    "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-react-helmet": "^3.6.0",
     "gatsby-plugin-sharp": "^2.10.1",
     "gatsby-source-filesystem": "^2.7.0",
