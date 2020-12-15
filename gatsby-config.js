@@ -10,11 +10,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-material-ui",
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/assets`,
       },
       __key: "src",
     },

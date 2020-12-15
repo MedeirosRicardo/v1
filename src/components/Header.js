@@ -6,7 +6,6 @@ import Box from "@material-ui/core/Box";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../assets/images/avatar.png";
-import { graphql } from "gatsby";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -32,22 +31,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = (props) => {
+const Header = ({ resumeData }) => {
   const classes = useStyles();
-  const resumeData = props.resumeData;
 
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt={resumeData.name} />
+        <Avatar className={classes.avatar} src={avatar} alt={resumeData.resume.name} />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={[resumeData.name]} typeSpeed={40} />
+        <Typed strings={[resumeData.resume.name]} typeSpeed={40} />
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
         <Typed
-          strings={resumeData.homeSkills.map((item) => item.skillname)}
+          strings={resumeData.resume.homeSkills.map((item) => item.skillname)}
           typeSpeed={40}
           backSpeed={50}
           loop
@@ -58,4 +56,3 @@ const Header = (props) => {
 };
 
 export default Header;
-

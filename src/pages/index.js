@@ -1,15 +1,26 @@
-import React from "react"
-import Particles from "../components/Particles"
+import React from "react";
+import Header from "../components/Header";
+import Particles from "../components/Particles";
+import { graphql } from "gatsby";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <React.Fragment>
+      <Header resumeData={data} />
       <Particles />
-      <div style={{ backgroundColor: "red", height: "500px" }}>
-        <p>Test</p>
-      </div>
     </React.Fragment>
   )
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    resume: resumeDataJson {
+      name
+      homeSkills {
+        skillname
+      }
+    }
+  }
+`;
