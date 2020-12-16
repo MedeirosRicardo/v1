@@ -104,11 +104,12 @@
       {
         "name": "Ricardo.TO - v1",
         "description": "The first version of my personal website built with React and Material-UI.",
-        "imgurl": "images/portfolio-01.jpg",
+        "imgurl": "/src/assets/images/portfolio-01.jpg",
         "codeurl": "https://github.com/MedeirosRicardo/v1",
         "liveurl": "https://www.ricardo.to/",
         "technologies": [
           "JavaScript",
+          "Gatsby",
           "React",
           "Material-UI",
           "EmailJS"
@@ -133,7 +134,7 @@
       {
         "name": "Math Game",
         "description": "A Math Game that encourages kids to perform basic addition, subtraction and division of numbers.",
-        "imgurl": "images/portfolio-04.jpg",
+        "imgurl": "/images/portfolio-03.jpg",
         "codeurl": "https://github.com/MedeirosRicardo/math-game",
         "liveurl": "https://arnin-math-game.herokuapp.com/",
         "technologies": [
@@ -145,7 +146,7 @@
       {
         "name": "Airbnb Website Clone",
         "description": "The objective of this project was to create from scratch a server-side web application using Node.js, Express, Handlebars, and MongoDB.",
-        "imgurl": "images/portfolio-05.jpg",
+        "imgurl": "/src/assets/images/portfolio-04.jpg",
         "codeurl": "https://github.com/MedeirosRicardo/airbnb",
         "liveurl": "https://arnin-web322.herokuapp.com/",
         "technologies": [

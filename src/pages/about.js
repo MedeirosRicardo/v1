@@ -10,8 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { graphql } from 'gatsby';
-
-import myPhoto from '../assets/images/me.jpg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles(() => ({
   aboutContainer: {
@@ -104,7 +103,13 @@ const AboutPage = ({ data }) => {
           </Grid>
           <Grid>
             <Avatar className={classes.image}>
-              <img className={classes.img} alt="complex" src={myPhoto} />
+              <StaticImage
+                src="../assets/images/me.jpg"
+                layout="fixed"
+                width={500}
+                alt="Me"
+                className={classes.img}
+              />
             </Avatar>
           </Grid>
         </Grid>
