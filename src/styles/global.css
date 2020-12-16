@@ -6,11 +6,31 @@ body {
   background-size: cover;
 }
 
-body, #root {
-  height: 100%;
+#gatsby-focus-wrapper {
+  min-height: 100vh;
 }
 
-#root {
+#gatsby-focus-wrapper {
   display: flex;
   flex-direction: column;
  }
+
+ /* Scrollbar Styles */
+ body::-webkit-scrollbar {
+  width: 12px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: tomato #2b2b2b;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: tomato;
+  border-radius: 6px;
+  border: 3px solid #2b2b2b;
+}
