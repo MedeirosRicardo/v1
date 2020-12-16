@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "gatsby";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -39,15 +38,13 @@ const Footer = () => {
         <BottomNavigationAction
           icon={<LinkedIn />}
           className={classes.root}
-          // component={Link}
-          to={{ pathname: "https://www.linkedin.com/in/ricmedeiros" }}
+          href="https://www.linkedin.com/in/ricmedeiros"
           target="_blank"
         />
         <BottomNavigationAction
           icon={<GitHub />}
           className={classes.root}
-          // component={Link}
-          to={{ pathname: "https://github.com/medeirosricardo" }}
+          href="https://www.github.com/medeirosricardo"
           target="_blank"
         />
       </BottomNavigation>
