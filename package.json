@@ -19,6 +19,9 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "dotenv": "^8.2.0",
+    "emailjs-com": "^2.6.4",
     "gatsby": "^2.26.1",
     "gatsby-plugin-image": "^0.3.1",
     "gatsby-plugin-material-ui": "^2.1.10",
@@ -30,6 +33,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^6.13.1",
     "react-particles-js": "^3.4.1",
     "react-typed": "^1.2.0"
   }
