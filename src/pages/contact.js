@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import { Alert, AlertTitle } from '@material-ui/lab';
 import Send from "@material-ui/icons/Send";
 import emailjs from "emailjs-com";
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -70,10 +71,10 @@ const defaultValues = {
 const Contact = () => {
   const classes = useStyles();
 
-  const [ isSuccessfullySubmitted, setIsSuccessfullySubmitted ] = useState(false);
+  const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
-  const { control, handleSubmit, errors, reset } = useForm({defaultValues});
-  
+  const { control, handleSubmit, errors, reset } = useForm({ defaultValues });
+
   const onSubmit = async values => {
     const serviceID = process.env.GATSBY_SERVICE_ID;
     const templateID = process.env.GATSBY_TEMPLATE_ID;
@@ -87,95 +88,98 @@ const Contact = () => {
       .catch(() => {
         setIsSuccessfullySubmitted("error");
       });
-    };
+  };
 
   return (
-    <Grid container className={classes.contactContainer}>
-      <Grid container justify="center">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Box>
-            <Typography variant="h5" className={classes.heading}>
-              Get In Touch
+    <React.Fragment>
+      <SEO title="Contact Me" />
+      <Grid container className={classes.contactContainer}>
+        <Grid container justify="center">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Box>
+              <Typography variant="h5" className={classes.heading}>
+                Get In Touch
             </Typography>
-            {isSuccessfullySubmitted === true && (
-              <Alert severity="success" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
-                <AlertTitle>Success</AlertTitle>
+              {isSuccessfullySubmitted === true && (
+                <Alert severity="success" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
+                  <AlertTitle>Success</AlertTitle>
               Your message was successfully sent!
-              </Alert>
-            )}
-            {isSuccessfullySubmitted === "error" && (
-              <Alert severity="error" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
-                <AlertTitle>Something went wrong</AlertTitle>
+                </Alert>
+              )}
+              {isSuccessfullySubmitted === "error" && (
+                <Alert severity="error" className={classes.field} onClose={() => setIsSuccessfullySubmitted(false)}>
+                  <AlertTitle>Something went wrong</AlertTitle>
               Your message was not sent. Please try again!
-              </Alert>
-            )}
-            <Controller
-              name="name"
-              as={
-                <InputField
-                  fullWidth={true}
-                  label="Name"
-                  variant="outlined"
-                  inputProps={{ className: classes.input }}
-                  required={true}
-                />
-              }
-              control={control}
-              defaultValue=""
-            />
-            <Controller
-              name="email"
-              as={
-                <InputField
-                  id="email"
-                  fullWidth={true}
-                  label="Email"
-                  variant="outlined"
-                  inputProps={{ className: classes.input }}
-                  className={classes.field}
-                  required={true}
-                  helperText={errors.email ? errors.email.message : null}
-                  error={errors.email ? true : false}
-                />
-              }
-              control={control}
-              defaultValue=""
-              rules={{
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: 'Invalid email address'
+                </Alert>
+              )}
+              <Controller
+                name="name"
+                as={
+                  <InputField
+                    fullWidth={true}
+                    label="Name"
+                    variant="outlined"
+                    inputProps={{ className: classes.input }}
+                    required={true}
+                  />
                 }
-              }}
-            />
-            <Controller
-              name="message"
-              as={
-                <InputField
-                  fullWidth={true}
-                  label="Message"
-                  variant="outlined"
-                  multiline
-                  rows={4}
-                  inputProps={{ className: classes.input }}
-                  required={true}
-                />
-              }
-              control={control}
-              defaultValue=""
-            />
-            <Button
-              variant="outlined"
-              fullWidth={true}
-              endIcon={<Send />}
-              className={classes.button}
-              type="submit"
-            >
-              Contact Me
+                control={control}
+                defaultValue=""
+              />
+              <Controller
+                name="email"
+                as={
+                  <InputField
+                    id="email"
+                    fullWidth={true}
+                    label="Email"
+                    variant="outlined"
+                    inputProps={{ className: classes.input }}
+                    className={classes.field}
+                    required={true}
+                    helperText={errors.email ? errors.email.message : null}
+                    error={errors.email ? true : false}
+                  />
+                }
+                control={control}
+                defaultValue=""
+                rules={{
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: 'Invalid email address'
+                  }
+                }}
+              />
+              <Controller
+                name="message"
+                as={
+                  <InputField
+                    fullWidth={true}
+                    label="Message"
+                    variant="outlined"
+                    multiline
+                    rows={4}
+                    inputProps={{ className: classes.input }}
+                    required={true}
+                  />
+                }
+                control={control}
+                defaultValue=""
+              />
+              <Button
+                variant="outlined"
+                fullWidth={true}
+                endIcon={<Send />}
+                className={classes.button}
+                type="submit"
+              >
+                Contact Me
             </Button>
-          </Box>
-        </form>
+            </Box>
+          </form>
+        </Grid>
       </Grid>
-    </Grid>
+    </React.Fragment>
   );
 };
 

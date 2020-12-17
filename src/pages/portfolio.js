@@ -11,6 +11,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles(() => ({
   mainContainer: {
@@ -54,59 +55,62 @@ const PortfolioPage = ({ data }) => {
   const classes = useStyles();
   const images = data.images.nodes
     .map(item => getImage(item));
-    // TODO: add GatsbyImage
+  // TODO: add GatsbyImage
 
   return (
-    <Box component="div" className={classes.mainContainer}>
-      <Grid container justify="center">
-        {data.resume.portfolio.map((item, i) => (
-          <Grid item xs={12} sm={8} md={4} key={`portfolio-${i + 1}`}>
-            <Card className={classes.cardContainer} elevation={3}>
-              <GatsbyImage image={images[i]} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
-              <CardContent className={classes.cardContent}>
-                <Typography variant="h5" gutterBottom>
-                  {item.name}
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  {item.description}
-                </Typography>
-                {item.technologies.map((tech, i) => (
-                  <Typography key={i} className={classes.technologies} variant="body1" color="textPrimary">
-                    {tech}
+    <React.Fragment>
+      <SEO title="Portfolio" />
+      <Box component="div" className={classes.mainContainer}>
+        <Grid container justify="center">
+          {data.resume.portfolio.map((item, i) => (
+            <Grid item xs={12} sm={8} md={4} key={`portfolio-${i + 1}`}>
+              <Card className={classes.cardContainer} elevation={3}>
+                <GatsbyImage image={images[i]} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
+                <CardContent className={classes.cardContent}>
+                  <Typography variant="h5" gutterBottom>
+                    {item.name}
                   </Typography>
-                ))}
-              </CardContent>
-              <ThemeProvider theme={theme}>
-                <CardActions className={classes.cardBottom}>
-                  <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    startIcon={<GitHubIcon />}
-                    href={`${item.codeurl}`}
-                    target="_blank"
-                  >
-                    Code
-                  </Button>
-                  {item.liveurl === "" ? "" :
+                  <Typography variant="body2" color="textSecondary">
+                    {item.description}
+                  </Typography>
+                  {item.technologies.map((tech, i) => (
+                    <Typography key={i} className={classes.technologies} variant="body1" color="textPrimary">
+                      {tech}
+                    </Typography>
+                  ))}
+                </CardContent>
+                <ThemeProvider theme={theme}>
+                  <CardActions className={classes.cardBottom}>
                     <Button
                       size="small"
                       variant="contained"
                       color="primary"
-                      endIcon={<ExitToAppIcon />}
-                      href={`${item.liveurl}`}
+                      startIcon={<GitHubIcon />}
+                      href={`${item.codeurl}`}
                       target="_blank"
                     >
-                      Live Demo
+                      Code
                   </Button>
-                  }
-                </CardActions>
-              </ThemeProvider>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                    {item.liveurl === "" ? "" :
+                      <Button
+                        size="small"
+                        variant="contained"
+                        color="primary"
+                        endIcon={<ExitToAppIcon />}
+                        href={`${item.liveurl}`}
+                        target="_blank"
+                      >
+                        Live Demo
+                  </Button>
+                    }
+                  </CardActions>
+                </ThemeProvider>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </React.Fragment>
   );
 }
 

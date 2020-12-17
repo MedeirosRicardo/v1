@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles(() => ({
   aboutContainer: {
@@ -64,57 +65,60 @@ const AboutPage = ({ data }) => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.aboutContainer}>
-      <Box className={classes.innerContainer}>
-        <Typography variant="h4" align="left" className={classes.heading}>
-          About Me
+    <React.Fragment>
+      <SEO title="About Me" />
+      <Grid container className={classes.aboutContainer}>
+        <Box className={classes.innerContainer}>
+          <Typography variant="h4" align="left" className={classes.heading}>
+            About Me
         </Typography>
-        <Grid container>
-          <Grid item sm>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs className={classes.skillsContainer}>
-                <Typography variant="body1" className={classes.text}>
-                  Hello! I'm Ricardo, a software engineer based in Toronto, ON.
+          <Grid container>
+            <Grid item sm>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid item xs className={classes.skillsContainer}>
+                  <Typography variant="body1" className={classes.text}>
+                    Hello! I'm Ricardo, a software engineer based in Toronto, ON.
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
-                  I enjoy creating things, wheter it is a website, an application, or anything in between. My goal is
-                  to always build products that provide performant experiences.
+                  <Typography variant="body1" className={classes.text}>
+                    I enjoy creating things, wheter it is a website, an application, or anything in between. My goal is
+                    to always build products that provide performant experiences.
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
-                  I'm graduate from{' '}
-                  <a href="https://www.senecacollege.ca/">Seneca College</a>
-                  {' '}in Computer Programmer.
+                  <Typography variant="body1" className={classes.text}>
+                    I'm graduate from{' '}
+                    <a href="https://www.senecacollege.ca/">Seneca College</a>
+                    {' '}in Computer Programmer.
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
-                  Here are a few technologies I've been working with recently:
+                  <Typography variant="body1" className={classes.text}>
+                    Here are a few technologies I've been working with recently:
                 </Typography>
-                <GridList cols={2} cellHeight="auto">
-                  {data.resume.skills.map((skill, i) => (
-                    <ListItem key={`skill-${i}`}>
-                      <ListItemIcon className={classes.skillsText}>
-                        <ArrowRightIcon />
-                      </ListItemIcon>
-                      <ListItemText primary={skill.skillname} className={classes.skillsText} />
-                    </ListItem>
-                  ))}
-                </GridList>
+                  <GridList cols={2} cellHeight="auto">
+                    {data.resume.skills.map((skill, i) => (
+                      <ListItem key={`skill-${i}`}>
+                        <ListItemIcon className={classes.skillsText}>
+                          <ArrowRightIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={skill.skillname} className={classes.skillsText} />
+                      </ListItem>
+                    ))}
+                  </GridList>
+                </Grid>
               </Grid>
             </Grid>
+            <Grid>
+              <Avatar className={classes.image}>
+                <StaticImage
+                  src="../assets/images/me.jpg"
+                  layout="fixed"
+                  width={500}
+                  alt="Me"
+                  className={classes.img}
+                />
+              </Avatar>
+            </Grid>
           </Grid>
-          <Grid>
-            <Avatar className={classes.image}>
-              <StaticImage
-                src="../assets/images/me.jpg"
-                layout="fixed"
-                width={500}
-                alt="Me"
-                className={classes.img}
-              />
-            </Avatar>
-          </Grid>
-        </Grid>
-      </Box>
-    </Grid>
+        </Box>
+      </Grid>
+    </React.Fragment>
   );
 }
 
