@@ -5,13 +5,13 @@
   ricardo.TO - v1.1
 </h1>
 <p align="center">
-  The first version of <a href="https://ricardo.to" target="_blank">ricardo.to</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and <a href="https://material-ui.com/" target="_blank">Material - UI</a>
+  The first version of <a href="https://ricardo.to" target="_blank">ricardo.to</a> built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a> and <a href="https://material-ui.com/" target="_blank">Material - UI</a>
 </p>
 
 ![demo](https://www.ricardo.to/images/page.jpg)
 
 ## 📑 Version 1.1
-Changed from Creat-React-App to Gatsby
+Changed from [Creat-React-App](https://reactjs.org/docs/create-a-new-react-app.html) to [Gatsby](https://www.gatsbyjs.com/).
 
 ## 🚨 Forking this repo
 

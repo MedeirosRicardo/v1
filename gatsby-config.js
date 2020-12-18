@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
     "gatsby-plugin-material-ui",
     "gatsby-transformer-json",
