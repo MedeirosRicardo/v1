@@ -16,6 +16,19 @@ module.exports = {
     "gatsby-plugin-material-ui",
     "gatsby-transformer-json",
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ricardo.TO`,
+        short_name: `Ricardo.TO`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/assets/images/icon.svg`,
+        theme_color_in_head: false,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
