@@ -23,7 +23,7 @@ const SEO = ({ children, location, description, title, image }) => {
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || '/header.svg'} />
+      <meta property="og:image" content={image || '/header.png'} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta property="og:site_name" content={site.siteMetadata.title} key="ogsitename" />
       <meta property="og:description" content={description} key="ogdesc" />
