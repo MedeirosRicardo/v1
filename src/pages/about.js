@@ -77,7 +77,7 @@ const AboutPage = ({ data }) => {
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs className={classes.skillsContainer}>
                   <Typography variant="body1" className={classes.text}>
-                    Hello! I'm Ricardo, a software engineer based in Toronto, ON.
+                    Hello! I'm Ricardo Medeiros, a software engineer based in Toronto, ON.
                 </Typography>
                   <Typography variant="body1" className={classes.text}>
                     I enjoy creating things, wheter it is a website, an application, or anything in between. My goal is
