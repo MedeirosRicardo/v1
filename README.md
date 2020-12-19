@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://www.ricardo.to/static/media/avatar.52849e21.png" width="100" />
+  <img alt="Logo" src="https://www.ricardo.to/avatar.png" width="100" />
 </div>
 <h1 align="center">
   ricardo.TO - v1.1
@@ -8,7 +8,7 @@
   The first version of <a href="https://ricardo.to" target="_blank">ricardo.to</a> built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a> and <a href="https://material-ui.com/" target="_blank">Material - UI</a>
 </p>
 
-![demo](https://www.ricardo.to/images/page.jpg)
+![demo](https://www.ricardo.to/page.jpg)
 
 ## 📑 Version 1.1
 Changed from [Creat-React-App](https://reactjs.org/docs/create-a-new-react-app.html) to [Gatsby](https://www.gatsbyjs.com/).
