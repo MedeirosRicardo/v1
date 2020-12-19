@@ -55,7 +55,6 @@ const PortfolioPage = ({ data }) => {
   const classes = useStyles();
   const images = data.images.nodes
     .map(item => getImage(item));
-  // TODO: add GatsbyImage
 
   return (
     <React.Fragment>
@@ -128,7 +127,7 @@ query {
       technologies
     }
   }
-  images:  allFile(filter: {relativePath: {regex: "/portfolio/i"}}) {
+  images:  allFile(filter: {relativePath: {regex: "/portfolio/i"}}, sort: {fields: relativePath}) {
     nodes {
       childImageSharp {
         gatsbyImageData(quality: 100, layout: FLUID, maxWidth: 340)
