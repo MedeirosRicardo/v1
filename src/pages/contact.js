@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "1rem 0rem",
   },
+  mapleSyrup: {
+    display: "none",
+  }
 }));
 
 const InputField = withStyles({
@@ -65,7 +68,8 @@ const InputField = withStyles({
 const defaultValues = {
   name: "",
   email: "",
-  message: ""
+  message: "",
+  mapleSyrup: "",
 };
 
 const Contact = () => {
@@ -80,14 +84,20 @@ const Contact = () => {
     const templateID = process.env.GATSBY_TEMPLATE_ID;
     const userID = process.env.GATSBY_USER_ID;
 
-    emailjs.send(serviceID, templateID, values, userID)
-      .then(() => {
-        reset(defaultValues);
-        setIsSuccessfullySubmitted(true);
-      })
-      .catch(() => {
-        setIsSuccessfullySubmitted("error");
-      });
+    if (values.mapleSyrup !== "") {
+      setIsSuccessfullySubmitted("error");
+    } else {
+      emailjs.send(serviceID, templateID, values, userID)
+        .then(() => {
+          reset(defaultValues);
+          setIsSuccessfullySubmitted(true);
+        })
+        .catch(() => {
+          setIsSuccessfullySubmitted("error");
+        });
+
+    }
+
   };
 
   return (
@@ -149,6 +159,21 @@ const Contact = () => {
                     message: 'Invalid email address'
                   }
                 }}
+              />
+              <Controller
+                name="mapleSyrup"
+                as={
+                  <InputField
+                    id="mapleSyrup"
+                    fullWidth={true}
+                    label="mapleSyrup"
+                    variant="outlined"
+                    inputProps={{ className: classes.input }}
+                    className={classes.mapleSyrup}
+                  />
+                }
+                control={control}
+                defaultValue=""
               />
               <Controller
                 name="message"
