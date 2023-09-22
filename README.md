@@ -13,7 +13,7 @@ Changed from [Creat-React-App](https://reactjs.org/docs/create-a-new-react-app.h
 
 ## 🚨 Forking this repo
 
-Yes, you can fork this repo. Please give me proper credit by linking back to [ricardo.TO](https://www.ricardo.to). Thanks!
+Yes, you can fork this repo.
 
 ## 🛠 Installation & Set Up
 
