@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://www.ricardo.to/avatar.png" width="100" />
+  <img alt="Logo" src="" width="100" />
 </div>
 <h1 align="center">
   ricardo.TO - v1.1
