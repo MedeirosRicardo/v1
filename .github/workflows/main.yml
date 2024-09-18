@@ -3,10 +3,10 @@ name: Build and Deploy Gatsby Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger the workflow on push or merge to the 'main' branch
+      - master  # Trigger the workflow on push or merge to the 'main' branch
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
