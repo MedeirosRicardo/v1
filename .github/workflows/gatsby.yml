@@ -54,7 +54,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         id: pages
@@ -95,4 +95,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-
