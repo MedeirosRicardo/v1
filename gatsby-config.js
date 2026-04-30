@@ -3,8 +3,8 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
 module.exports = {
+  pathPrefix: `/v1`,
   siteMetadata: {
-    pathPrefix: `/v1`,
     title: `Ricardo.TO`,
     siteUrl: 'https://medeirosricardo.github.io/v1',
     description: 'Ricardo Medeiros personal website portfolio.',
