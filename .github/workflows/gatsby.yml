@@ -59,27 +59,26 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject pathPrefix in your Gatsby configuration file.
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: gatsby
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
           path: |
-            public
             .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('package-lock.json', 'gatsby-config.js', 'src/**') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
           NODE_OPTIONS: --openssl-legacy-provider
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: |
+          ${{ steps.detect-package-manager.outputs.manager }} run clean
+          ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
