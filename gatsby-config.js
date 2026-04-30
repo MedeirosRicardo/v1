@@ -4,6 +4,7 @@ dotenv.config({ path: '.env' });
 
 module.exports = {
   siteMetadata: {
+    pathPrefix: `/v1`,
     title: `Ricardo.TO`,
     siteUrl: 'https://medeirosricardo.github.io/v1',
     description: 'Ricardo Medeiros personal website portfolio.',
