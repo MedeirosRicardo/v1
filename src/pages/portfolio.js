@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { graphql, withPrefix } from 'gatsby';
+import { graphql } from 'gatsby';
 import SEO from "../components/SEO";
 
 const useStyles = makeStyles(() => ({
@@ -66,7 +66,7 @@ const PortfolioPage = ({ data }) => {
           {data.resume.portfolio.map((item, i) => (
             <Grid item xs={12} sm={8} md={4} key={`portfolio-${i + 1}`}>
               <Card className={classes.cardContainer} elevation={3}>
-                <img src={withPrefix(images[i])} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
+                <img src={images[i]} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
                 <CardContent className={classes.cardContent}>
                   <Typography variant="h5" gutterBottom>
                     {item.name}
