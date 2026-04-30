@@ -9,8 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql, withPrefix } from 'gatsby';
 import SEO from "../components/SEO";
 
 const useStyles = makeStyles(() => ({
@@ -38,7 +37,10 @@ const useStyles = makeStyles(() => ({
     lineHeight: 1
   },
   gatsbyImg: {
-    height: 140
+    height: 140,
+    width: "100%",
+    objectFit: "cover",
+    display: "block"
   },
 }));
 
@@ -54,7 +56,7 @@ const theme = createMuiTheme({
 const PortfolioPage = ({ data }) => {
   const classes = useStyles();
   const images = data.images.nodes
-    .map(item => getImage(item));
+    .map(item => item.publicURL);
 
   return (
     <React.Fragment>
@@ -64,7 +66,7 @@ const PortfolioPage = ({ data }) => {
           {data.resume.portfolio.map((item, i) => (
             <Grid item xs={12} sm={8} md={4} key={`portfolio-${i + 1}`}>
               <Card className={classes.cardContainer} elevation={3}>
-                <GatsbyImage image={images[i]} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
+                <img src={withPrefix(images[i])} alt={`portfolio-${i}`} className={classes.gatsbyImg} />
                 <CardContent className={classes.cardContent}>
                   <Typography variant="h5" gutterBottom>
                     {item.name}
@@ -129,9 +131,7 @@ query {
   }
   images:  allFile(filter: {relativePath: {regex: "/portfolio/i"}}, sort: {fields: relativePath}) {
     nodes {
-      childImageSharp {
-        gatsbyImageData(quality: 100, layout: FLUID, maxWidth: 340)
-      }
+      publicURL
     }
   }
 }
